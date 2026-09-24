@@ -234,6 +234,24 @@
     <li><b>Mais effort nem sempre rende mais.</b> No FrontierCode, <code>medium</code> marca 54,6% e <code>max</code> 54,4%. No CursorBench, subir de <code>medium</code> (52,5%, ~US$ 3 por tarefa) para <code>max</code> (57,8%) rende cerca de 5 pontos, pagando mais por tarefa.</li>
     <li><b>No mesmo nível, pensa mais por turno</b> que o Opus 5, sobretudo em <code>xhigh</code> e <code>max</code>. Deixe folga no <code>max_tokens</code> (64K é o ponto de partida sugerido para turnos longos de agente).</li>
   </ul>
+
+  <h3 style="margin-top:34px">Na prática: o mesmo app em seis níveis</h3>
+  <p class="h2sub">Teste de terceiros (24/09/2026): o mesmo <code>/goal</code> no Claude Code em todos os níveis, transformando ~105 GB de gravações de um evento em uma conferência 3D explorável. É uma rodada por nível, com o julgamento visual do autor, e custo estimado em preço de API.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Effort</th><th>Tempo</th><th>Custo (est.)</th><th>Tokens</th><th>Checks</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td><code>low</code></td><td>16m43s</td><td>US$ 3,91</td><td>191k</td><td>22</td><td>Funciona, mas com marca errada e vídeos estáticos</td></tr>
+      <tr><td><code>medium</code></td><td>1h13m</td><td>US$ 12,44</td><td>419k</td><td>23</td><td>O maior salto de qualidade</td></tr>
+      <tr><td><code>high</code></td><td>1h07m</td><td>US$ 16,31</td><td>~559k</td><td>22</td><td>Mais detalhe e narrativa</td></tr>
+      <tr class="hl"><td><code>xhigh</code></td><td>1h30m</td><td>US$ 25,92</td><td>~723k</td><td>34</td><td><b>Preferido pelo autor</b></td></tr>
+      <tr><td><code>max</code></td><td>2h28m</td><td>US$ 50,38</td><td>1,18M</td><td>51</td><td>2× o custo do xhigh e com mais bugs</td></tr>
+      <tr><td>ultracode</td><td>1h35m</td><td>US$ 18,69</td><td>?</td><td>42</td><td>Não criou workflows; funcionou como xhigh</td></tr>
+    </tbody>
+  </table></div>
+  <p class="h2sub" style="margin-top:12px">O experimento do GPT-6 Astra com o mesmo desenho chegou ao mesmo padrão: o nível máximo não foi o preferido, e lá o vencedor foi o <code>medium</code>. Gráficos, os oito padrões e os limites dos dados estão em <a href="https://inematds.github.io/modelos/guia/esforco/">Esforço na prática</a> (<a href="https://inematds.github.io/modelos/guia/en/esforco/">EN</a> · <a href="https://inematds.github.io/modelos/guia/es/esforco/">ES</a>).</p>
+  <div class="note acc">
+    <b>Opinião do Nei:</b> usar o Opus 5.5 em <code>medium</code> é a melhor opção para o dia a dia. Suba para <code>high</code> quando precisar de mais raciocínio e deixe o <code>xhigh</code> para caso extremo. O mesmo vale para o GPT-6 Astra. O <code>max</code> fica de fora.
+  </div>
 </div></section>
 
 <!-- API -->
